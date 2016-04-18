@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "PersonInfoTableVC.h"
+#import "PersonInfoViewVC.h"
 
 @interface ViewController ()
 
@@ -22,6 +24,18 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)gotoInfoViewVC:(id)sender {
+    
+    PersonInfoViewVC *infoViewVC = [[PersonInfoViewVC alloc] init];
+    [self.navigationController pushViewController:infoViewVC animated:YES];
+}
+
+- (IBAction)gotoInfoTableVC:(id)sender {
+    
+    PersonInfoTableVC *infoTableVC = [[PersonInfoTableVC alloc] init];
+    [self.navigationController pushViewController:infoTableVC animated:YES];
 }
 
 @end

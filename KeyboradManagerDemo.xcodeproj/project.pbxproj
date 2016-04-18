@@ -13,6 +13,13 @@
 		D9AC6A3A1CC4937000970FD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9AC6A381CC4937000970FD9 /* Main.storyboard */; };
 		D9AC6A3C1CC4937000970FD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9AC6A3B1CC4937000970FD9 /* Assets.xcassets */; };
 		D9AC6A3F1CC4937000970FD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9AC6A3D1CC4937000970FD9 /* LaunchScreen.storyboard */; };
+		D9AC6A4C1CC49F6300970FD9 /* PersonInfoTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D9AC6A4A1CC49F6300970FD9 /* PersonInfoTableVC.m */; };
+		D9AC6A4D1CC49F6300970FD9 /* PersonInfoTableVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9AC6A4B1CC49F6300970FD9 /* PersonInfoTableVC.xib */; };
+		D9AC6A511CC49F7D00970FD9 /* PersonInfoViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D9AC6A4F1CC49F7D00970FD9 /* PersonInfoViewVC.m */; };
+		D9AC6A521CC49F7D00970FD9 /* PersonInfoViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9AC6A501CC49F7D00970FD9 /* PersonInfoViewVC.xib */; };
+		D9AC6A5E1CC4B23000970FD9 /* KeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D9AC6A5D1CC4B23000970FD9 /* KeyboardManager.m */; };
+		D9AC6A621CC4BCA700970FD9 /* PersonInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9AC6A601CC4BCA700970FD9 /* PersonInfoCell.m */; };
+		D9AC6A631CC4BCA700970FD9 /* PersonInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9AC6A611CC4BCA700970FD9 /* PersonInfoCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +33,17 @@
 		D9AC6A3B1CC4937000970FD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9AC6A3E1CC4937000970FD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9AC6A401CC4937000970FD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9AC6A491CC49F6300970FD9 /* PersonInfoTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonInfoTableVC.h; sourceTree = "<group>"; };
+		D9AC6A4A1CC49F6300970FD9 /* PersonInfoTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonInfoTableVC.m; sourceTree = "<group>"; };
+		D9AC6A4B1CC49F6300970FD9 /* PersonInfoTableVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonInfoTableVC.xib; sourceTree = "<group>"; };
+		D9AC6A4E1CC49F7D00970FD9 /* PersonInfoViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonInfoViewVC.h; sourceTree = "<group>"; };
+		D9AC6A4F1CC49F7D00970FD9 /* PersonInfoViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonInfoViewVC.m; sourceTree = "<group>"; };
+		D9AC6A501CC49F7D00970FD9 /* PersonInfoViewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonInfoViewVC.xib; sourceTree = "<group>"; };
+		D9AC6A5C1CC4B23000970FD9 /* KeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardManager.h; sourceTree = "<group>"; };
+		D9AC6A5D1CC4B23000970FD9 /* KeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardManager.m; sourceTree = "<group>"; };
+		D9AC6A5F1CC4BCA700970FD9 /* PersonInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonInfoCell.h; sourceTree = "<group>"; };
+		D9AC6A601CC4BCA700970FD9 /* PersonInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonInfoCell.m; sourceTree = "<group>"; };
+		D9AC6A611CC4BCA700970FD9 /* PersonInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonInfoCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +60,7 @@
 		D9AC6A231CC4937000970FD9 = {
 			isa = PBXGroup;
 			children = (
+				D9AC6A461CC493AC00970FD9 /* KeyboardManager */,
 				D9AC6A2E1CC4937000970FD9 /* KeyboradManagerDemo */,
 				D9AC6A2D1CC4937000970FD9 /* Products */,
 			);
@@ -62,6 +81,8 @@
 				D9AC6A331CC4937000970FD9 /* AppDelegate.m */,
 				D9AC6A351CC4937000970FD9 /* ViewController.h */,
 				D9AC6A361CC4937000970FD9 /* ViewController.m */,
+				D9AC6A481CC49F1800970FD9 /* UIView */,
+				D9AC6A471CC49F0800970FD9 /* TableView */,
 				D9AC6A381CC4937000970FD9 /* Main.storyboard */,
 				D9AC6A3B1CC4937000970FD9 /* Assets.xcassets */,
 				D9AC6A3D1CC4937000970FD9 /* LaunchScreen.storyboard */,
@@ -77,6 +98,38 @@
 				D9AC6A301CC4937000970FD9 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D9AC6A461CC493AC00970FD9 /* KeyboardManager */ = {
+			isa = PBXGroup;
+			children = (
+				D9AC6A5C1CC4B23000970FD9 /* KeyboardManager.h */,
+				D9AC6A5D1CC4B23000970FD9 /* KeyboardManager.m */,
+			);
+			path = KeyboardManager;
+			sourceTree = "<group>";
+		};
+		D9AC6A471CC49F0800970FD9 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				D9AC6A491CC49F6300970FD9 /* PersonInfoTableVC.h */,
+				D9AC6A4A1CC49F6300970FD9 /* PersonInfoTableVC.m */,
+				D9AC6A4B1CC49F6300970FD9 /* PersonInfoTableVC.xib */,
+				D9AC6A5F1CC4BCA700970FD9 /* PersonInfoCell.h */,
+				D9AC6A601CC4BCA700970FD9 /* PersonInfoCell.m */,
+				D9AC6A611CC4BCA700970FD9 /* PersonInfoCell.xib */,
+			);
+			name = TableView;
+			sourceTree = "<group>";
+		};
+		D9AC6A481CC49F1800970FD9 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				D9AC6A4E1CC49F7D00970FD9 /* PersonInfoViewVC.h */,
+				D9AC6A4F1CC49F7D00970FD9 /* PersonInfoViewVC.m */,
+				D9AC6A501CC49F7D00970FD9 /* PersonInfoViewVC.xib */,
+			);
+			name = UIView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +189,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9AC6A521CC49F7D00970FD9 /* PersonInfoViewVC.xib in Resources */,
 				D9AC6A3F1CC4937000970FD9 /* LaunchScreen.storyboard in Resources */,
+				D9AC6A631CC4BCA700970FD9 /* PersonInfoCell.xib in Resources */,
 				D9AC6A3C1CC4937000970FD9 /* Assets.xcassets in Resources */,
+				D9AC6A4D1CC49F6300970FD9 /* PersonInfoTableVC.xib in Resources */,
 				D9AC6A3A1CC4937000970FD9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,8 +205,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9AC6A621CC4BCA700970FD9 /* PersonInfoCell.m in Sources */,
+				D9AC6A511CC49F7D00970FD9 /* PersonInfoViewVC.m in Sources */,
 				D9AC6A371CC4937000970FD9 /* ViewController.m in Sources */,
 				D9AC6A341CC4937000970FD9 /* AppDelegate.m in Sources */,
+				D9AC6A4C1CC49F6300970FD9 /* PersonInfoTableVC.m in Sources */,
+				D9AC6A5E1CC4B23000970FD9 /* KeyboardManager.m in Sources */,
 				D9AC6A311CC4937000970FD9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,6 +358,7 @@
 				D9AC6A451CC4937000970FD9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
