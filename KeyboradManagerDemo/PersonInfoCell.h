@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface PersonInfoCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UITextField *textFeild;
 
 @end
