@@ -2,8 +2,8 @@
 //  BottomTxtVCView.h
 //  KeyboradManagerDemo
 //
-//  Created by zhangdong on 16/4/19.
-//  Copyright © 2016年 zhangdong. All rights reserved.
+//  Created by __Nature__ on 16/4/19.
+//  Copyright © 2016年 __Nature__. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
