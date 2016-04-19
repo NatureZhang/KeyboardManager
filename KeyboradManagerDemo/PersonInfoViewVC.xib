@@ -7,7 +7,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PersonInfoViewVC">
             <connections>
+                <outlet property="confirmPasswordField" destination="4Pg-Gx-YLI" id="Fqb-XC-O5R"/>
                 <outlet property="emailTextField" destination="giE-cn-k9G" id="ni4-Y5-FAb"/>
+                <outlet property="nameTxtField" destination="bYG-LI-yUl" id="ShO-6I-hyR"/>
+                <outlet property="nickNameField" destination="GWx-gM-oUN" id="0fC-FX-sPd"/>
+                <outlet property="passwordField" destination="7d6-L2-z6I" id="pGp-RW-dKJ"/>
                 <outlet property="phoneTextField" destination="ukI-Vx-Mov" id="TPP-QV-KLv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

@@ -17,6 +17,8 @@
 
 @end
 
+static const NSInteger inputViewTag = 1000001;
+
 @implementation KeyboardManager
 
 - (void)dealloc {
@@ -148,13 +150,14 @@
     }
 }
 
+// 添加输入View 和 想要滚动的 View
 - (void)addInputView:(UIView *)inputView andWillScrollView:(UIView *)willScrollView {
     
     if (inputView == nil || willScrollView == nil) {
         return;
     }
     
-    // 移除掉旧的，添加新的
+    // 移除掉旧的，添加新的，避免重复
     
     NSMutableArray *tmparrayInputView = [[NSMutableArray alloc] init];
     NSMutableArray *tmpArrayScrollView = [[NSMutableArray alloc] init];
@@ -168,24 +171,66 @@
             
             [tmparrayInputView addObject:tmpInputView];
             [tmpArrayScrollView addObject:tmpScrollView];
+            
+            break;
         }
     }
     
     [_arrayInputViews removeObjectsInArray:tmparrayInputView];
     [_arrayInputViews removeObjectsInArray:tmpArrayScrollView];
     
+    NSInteger lastTag = [_arrayInputViews count];
+    inputView.tag = inputViewTag + lastTag;
+    
     // 将新的插入
     [_arrayInputViews addObject:inputView];
     [_arrayWantScrollView addObject:willScrollView];
+}
+
+// 移动到下一个
+- (void)moveToNextInputView:(UIView *)inputView {
+    
+    if (!_arrayInputViews && [_arrayInputViews count] == 0) {
+        return;
+    }
+    
+    if (inputView) {
+        [inputView becomeFirstResponder];
+        return;
+    }
+    
+    NSInteger currentInputViewTag = 0;
+    
+    for (int i = 0; i < [_arrayInputViews count]; i ++) {
+        
+        UIView *inputView = [_arrayInputViews objectAtIndex:i];
+        
+        if ([inputView isFirstResponder]) {
+            
+            if (i == _arrayInputViews.count - 1) {
+                return;
+            }
+            
+            currentInputViewTag = inputView.tag;
+            break;
+        }
+    }
+    
+    for (int i = 0; i < [_arrayInputViews count]; i ++) {
+        
+        UIView *inputView = [_arrayInputViews objectAtIndex:i];
+        if (inputView.tag == currentInputViewTag + 1) {
+            [inputView becomeFirstResponder];
+            break;
+        }
+    }
 }
 
 // 滚动想要滚动的视图
 - (void)scrollWillScrollView:(UIView *)willScrollView inputView:(UIView *)inputView {
     
     // 参考View
-    UIView *refView = willScrollView;//[UIApplication sharedApplication].keyWindow;
-    
-    refView = [UIApplication sharedApplication].keyWindow.rootViewController.view;
+    UIView *refView = [UIApplication sharedApplication].keyWindow;
     
     CGRect frame = [inputView.superview convertRect:inputView.frame toView:refView];
     int offset = frame.origin.y + frame.size.height - (refView.frame.size.height - self.keyboardHeight);//计算偏移量
@@ -218,6 +263,7 @@
     }];
 }
 
+// 隐藏键盘
 - (void)hideKeyboard {
     
     if (_arrayInputViews == nil && [_arrayInputViews count] == 0) {

@@ -41,5 +41,6 @@
  */
 - (void)addInputView:(UIView *)inputView andWillScrollView:(UIView *)willScrollView;
 
-
+// 移动到下一个
+- (void)moveToNextInputView:(UIView *)inputView;
 @end

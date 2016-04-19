@@ -16,7 +16,8 @@ static NSString *const infoCellId = @"infoCellId";
 @interface PersonInfoTableVC ()
 <
 UITableViewDelegate,
-UITableViewDataSource
+UITableViewDataSource,
+UITextFieldDelegate
 >
 
 @property (weak, nonatomic) IBOutlet UITableView *infoTableView;
@@ -32,6 +33,8 @@ UITableViewDataSource
     [self registerTableViewCell];
     
     self.keyboardManager = [[KeyboardManager alloc] init];
+    _keyboardManager.moreOffsetY = 30;
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,7 +57,9 @@ UITableViewDataSource
     
     PersonInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:infoCellId];
     UITextField *textField = cell.textFeild;
-    
+    textField.delegate = self;
+    textField.returnKeyType = UIReturnKeyNext;
+    textField.placeholder = [NSString stringWithFormat:@"请输入：%ld", (long)indexPath.row];
     [_keyboardManager addInputView:textField andWillScrollView:tableView];
     
     return cell;
@@ -63,5 +68,16 @@ UITableViewDataSource
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [tableView reloadData];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.keyboardManager hideKeyboard];
+}
+
+#pragma mark - UITextFieldDelegate 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    
+    [_keyboardManager moveToNextInputView:nil];
+    return YES;
 }
 @end

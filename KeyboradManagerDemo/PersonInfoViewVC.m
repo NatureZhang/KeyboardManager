@@ -11,6 +11,10 @@
 
 
 @interface PersonInfoViewVC ()
+@property (weak, nonatomic) IBOutlet UITextField *confirmPasswordField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordField;
+@property (weak, nonatomic) IBOutlet UITextField *nickNameField;
+@property (weak, nonatomic) IBOutlet UITextField *nameTxtField;
 @property (weak, nonatomic) IBOutlet UITextField *phoneTextField;
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 
@@ -28,6 +32,10 @@
     
     [_keyboardManager addInputView:_phoneTextField andWillScrollView:self.view];
     [_keyboardManager addInputView:_emailTextField andWillScrollView:self.view];
+    [_keyboardManager addInputView:_nameTxtField andWillScrollView:self.view];
+    [_keyboardManager addInputView:_nickNameField andWillScrollView:self.view];
+    [_keyboardManager addInputView:_passwordField andWillScrollView:self.view];
+    [_keyboardManager addInputView:_confirmPasswordField andWillScrollView:self.view];
     
     NSLog(@"=== %@ ===", self.view.subviews);
 }
@@ -37,5 +45,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.keyboardManager hideKeyboard];
+}
 @end
