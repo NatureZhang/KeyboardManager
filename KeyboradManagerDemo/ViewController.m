@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "PersonInfoTableVC.h"
 #import "PersonInfoViewVC.h"
+#import "BottomTxtViewVC.h"
 
 @interface ViewController ()
 
@@ -38,4 +39,9 @@
     [self.navigationController pushViewController:infoTableVC animated:YES];
 }
 
+- (IBAction)gotoBottomViewVC:(id)sender {
+    
+    BottomTxtViewVC *vc = [[BottomTxtViewVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 @end

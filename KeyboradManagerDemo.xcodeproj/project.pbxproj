@@ -20,6 +20,8 @@
 		D9AC6A5E1CC4B23000970FD9 /* KeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D9AC6A5D1CC4B23000970FD9 /* KeyboardManager.m */; };
 		D9AC6A621CC4BCA700970FD9 /* PersonInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9AC6A601CC4BCA700970FD9 /* PersonInfoCell.m */; };
 		D9AC6A631CC4BCA700970FD9 /* PersonInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9AC6A611CC4BCA700970FD9 /* PersonInfoCell.xib */; };
+		D9CAA8AB1CC5F50A0075A603 /* BottomTxtViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CAA8A91CC5F50A0075A603 /* BottomTxtViewVC.m */; };
+		D9CAA8AC1CC5F50A0075A603 /* BottomTxtViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9CAA8AA1CC5F50A0075A603 /* BottomTxtViewVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,9 @@
 		D9AC6A5F1CC4BCA700970FD9 /* PersonInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonInfoCell.h; sourceTree = "<group>"; };
 		D9AC6A601CC4BCA700970FD9 /* PersonInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonInfoCell.m; sourceTree = "<group>"; };
 		D9AC6A611CC4BCA700970FD9 /* PersonInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonInfoCell.xib; sourceTree = "<group>"; };
+		D9CAA8A81CC5F50A0075A603 /* BottomTxtViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomTxtViewVC.h; sourceTree = "<group>"; };
+		D9CAA8A91CC5F50A0075A603 /* BottomTxtViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomTxtViewVC.m; sourceTree = "<group>"; };
+		D9CAA8AA1CC5F50A0075A603 /* BottomTxtViewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BottomTxtViewVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +86,7 @@
 				D9AC6A331CC4937000970FD9 /* AppDelegate.m */,
 				D9AC6A351CC4937000970FD9 /* ViewController.h */,
 				D9AC6A361CC4937000970FD9 /* ViewController.m */,
-				D9AC6A481CC49F1800970FD9 /* UIView */,
+				D9AC6A481CC49F1800970FD9 /* UIViewVC */,
 				D9AC6A471CC49F0800970FD9 /* TableView */,
 				D9AC6A381CC4937000970FD9 /* Main.storyboard */,
 				D9AC6A3B1CC4937000970FD9 /* Assets.xcassets */,
@@ -122,14 +127,17 @@
 			name = TableView;
 			sourceTree = "<group>";
 		};
-		D9AC6A481CC49F1800970FD9 /* UIView */ = {
+		D9AC6A481CC49F1800970FD9 /* UIViewVC */ = {
 			isa = PBXGroup;
 			children = (
 				D9AC6A4E1CC49F7D00970FD9 /* PersonInfoViewVC.h */,
 				D9AC6A4F1CC49F7D00970FD9 /* PersonInfoViewVC.m */,
 				D9AC6A501CC49F7D00970FD9 /* PersonInfoViewVC.xib */,
+				D9CAA8A81CC5F50A0075A603 /* BottomTxtViewVC.h */,
+				D9CAA8A91CC5F50A0075A603 /* BottomTxtViewVC.m */,
+				D9CAA8AA1CC5F50A0075A603 /* BottomTxtViewVC.xib */,
 			);
-			name = UIView;
+			name = UIViewVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9AC6A521CC49F7D00970FD9 /* PersonInfoViewVC.xib in Resources */,
+				D9CAA8AC1CC5F50A0075A603 /* BottomTxtViewVC.xib in Resources */,
 				D9AC6A3F1CC4937000970FD9 /* LaunchScreen.storyboard in Resources */,
 				D9AC6A631CC4BCA700970FD9 /* PersonInfoCell.xib in Resources */,
 				D9AC6A3C1CC4937000970FD9 /* Assets.xcassets in Resources */,
@@ -210,6 +219,7 @@
 				D9AC6A371CC4937000970FD9 /* ViewController.m in Sources */,
 				D9AC6A341CC4937000970FD9 /* AppDelegate.m in Sources */,
 				D9AC6A4C1CC49F6300970FD9 /* PersonInfoTableVC.m in Sources */,
+				D9CAA8AB1CC5F50A0075A603 /* BottomTxtViewVC.m in Sources */,
 				D9AC6A5E1CC4B23000970FD9 /* KeyboardManager.m in Sources */,
 				D9AC6A311CC4937000970FD9 /* main.m in Sources */,
 			);

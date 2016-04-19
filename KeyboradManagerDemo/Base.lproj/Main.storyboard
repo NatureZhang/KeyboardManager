@@ -34,15 +34,26 @@
                                     <action selector="gotoInfoTableVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hJW-Wj-JQl"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0f-I1-eZH">
+                                <rect key="frame" x="50" y="275" width="500" height="30"/>
+                                <color key="backgroundColor" red="0.77536603559999995" green="0.82979193679999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="bottomTxtVC"/>
+                                <connections>
+                                    <action selector="gotoBottomViewVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jfb-7C-t3o"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="F0f-I1-eZH" firstAttribute="centerX" secondItem="9da-8w-1YJ" secondAttribute="centerX" id="0sl-eZ-0XT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vMg-tK-Qr0" secondAttribute="trailing" constant="30" id="D8q-D3-lwh"/>
                             <constraint firstItem="9da-8w-1YJ" firstAttribute="top" secondItem="vMg-tK-Qr0" secondAttribute="bottom" constant="32" id="Vo6-B2-C2e"/>
+                            <constraint firstItem="F0f-I1-eZH" firstAttribute="top" secondItem="9da-8w-1YJ" secondAttribute="bottom" constant="30" id="WAJ-aF-Ac6"/>
                             <constraint firstItem="vMg-tK-Qr0" firstAttribute="centerX" secondItem="9da-8w-1YJ" secondAttribute="centerX" id="bfg-PX-oyz"/>
                             <constraint firstItem="vMg-tK-Qr0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lVN-2l-ehO"/>
                             <constraint firstItem="9da-8w-1YJ" firstAttribute="width" secondItem="vMg-tK-Qr0" secondAttribute="width" id="td1-IR-SMG"/>
                             <constraint firstItem="vMg-tK-Qr0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="u1a-fP-51L"/>
+                            <constraint firstItem="F0f-I1-eZH" firstAttribute="width" secondItem="9da-8w-1YJ" secondAttribute="width" id="uDH-ak-tcR"/>
                             <constraint firstItem="vMg-tK-Qr0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="89" id="ya4-52-lfF"/>
                         </constraints>
                     </view>

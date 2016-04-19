@@ -28,6 +28,8 @@
     
     [_keyboardManager addInputView:_phoneTextField andWillScrollView:self.view];
     [_keyboardManager addInputView:_emailTextField andWillScrollView:self.view];
+    
+    NSLog(@"=== %@ ===", self.view.subviews);
 }
 
 - (void)didReceiveMemoryWarning {

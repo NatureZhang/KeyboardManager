@@ -68,8 +68,20 @@
     for (int i = 0; i < [_arrayInputViews count]; i ++) {
         
         UIView *inputView = [_arrayInputViews objectAtIndex:i];
-        
+        UIView * willScrollView = [_arrayWantScrollView objectAtIndex:i];
+
         if ([inputView isFirstResponder]) {
+            
+            // 找到第一响者
+            NSDictionary *info              = [notification userInfo];
+            NSValue *value                  = [info objectForKey:UIKeyboardFrameEndUserInfoKey];
+            CGSize size                     = [value CGRectValue].size;
+            self.keyboardHeight = size.height;
+            
+            if ([inputView isDescendantOfView:willScrollView]) {
+                // 滚动
+                [self scrollWillScrollView:willScrollView inputView:inputView];
+            }
             
             if (_delegate
                 && [_delegate conformsToProtocol:@protocol(KeyboardDelegate)]
@@ -90,19 +102,8 @@
     for (int i = 0; i < [_arrayInputViews count]; i ++) {
 
         UIView * inputView = [_arrayInputViews objectAtIndex:i];
-        UIView * willScrollView = [_arrayWantScrollView objectAtIndex:i];
         
         if ([inputView isFirstResponder]) {
-            // 找到第一响者
-            NSDictionary *info              = [notification userInfo];
-            NSValue *value                  = [info objectForKey:UIKeyboardFrameEndUserInfoKey];
-            CGSize size                     = [value CGRectValue].size;
-            self.keyboardHeight = size.height;
-            
-            if ([inputView isDescendantOfView:willScrollView]) {
-                // 滚动
-                [self scrollWillScrollView:willScrollView inputView:inputView];
-            }
             
             if (_delegate
                 && [_delegate conformsToProtocol:@protocol(KeyboardDelegate)]
